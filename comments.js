@@ -1,4 +1,19 @@
-// Create a web server that listens for requests on port 3000. It should respond to requests for /comments with a list of comments (an array of objects). Each object should have a username key and a comment key, both of which are strings.
+// Create a web server with Express.js
+// Create a route for POST /comments
+// Add a comment to the comments array
+// Respond with a status code of 201
 
-const http = require('http');
+// Create a new route for POST /comments
+app.post('/comments', (req, res) => {
+  // Get the comment from the request body
+  const comment = req.body.comment;
 
+  // Add the comment to the comments array
+  comments.push(comment);
+
+  // Respond with a status code of 201
+  res.status(201).send();
+});
+
+// Export the comments array
+module.exports = comments;
